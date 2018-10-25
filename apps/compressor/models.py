@@ -31,3 +31,6 @@ class HyperlinkModel(models.Model):
         db_table = 'hyperlink'
         verbose_name = "hyperlink"
         verbose_name_plural = "hyperlinks"
+
+    def __str__(self):
+        return f'{self.internal} - {self.original}'
