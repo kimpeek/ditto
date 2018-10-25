@@ -1,0 +1,13 @@
+TODO: analytics
+TODO: optional expiration
+TODO: features for result page
+    - copy to clipboard button
+    - display as clickable link
+    - display as text
+    - display as a raw HTML snippet
+    - show redirect URL
+TODO: site.com/shortened/s
+    - show the redirect URL
+TODO: site.com/shortened/a
+    - show number of click
+    - graph the time for each click
