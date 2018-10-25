@@ -1,6 +1,6 @@
 from django.views.generic.edit import CreateView
 from django.views.generic import TemplateView
-from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404, redirect
 
 from .models import HyperlinkModel
 
@@ -32,5 +32,5 @@ def redirect_view(request, **kwargs):
     """Redirect any internal Hyperlink URL to the original and record a view"""
 
     internal = kwargs.get('internal')
-    original = HyperlinkModel.objects.filter(internal=internal).first().original
-    return redirect(original, permanent=True)
+    record = get_object_or_404(HyperlinkModel, internal=internal)
+    return redirect(record.original, permanent=True)
