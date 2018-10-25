@@ -12,7 +12,9 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'debug_toolbar',
 ]
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'apps.compressor'
+]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
