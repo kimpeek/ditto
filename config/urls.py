@@ -5,7 +5,7 @@ from django.views import defaults as default_views
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    # path('', include('apps.index.urls'), name='index'),
+    path('', include('apps.compressor.urls'), name='compressor'),
 ]
 
 if settings.DEBUG:
