@@ -1,4 +1,6 @@
 TODO: analytics
+    - Create a clicks model
+    - record a click for the hyperlink every time redirect url is requested
 TODO: optional expiration
 TODO: features for result page
     - copy to clipboard button
