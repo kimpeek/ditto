@@ -6,6 +6,6 @@ app_name = 'compressor'
 
 urlpatterns = [
     path('', views.HyperlinkCreateView.as_view(), name='create'),
-    path('<str:internal>/', views.redirect_view, name='redirect'),
-    path('<str:internal>/info', views.HyperlinkInfoView.as_view(), name='info'),
+    path('r/<str:internal>/', views.redirect_view, name='redirect'),
+    path('i/<str:internal>/', views.HyperlinkInfoView.as_view(), name='info'),
 ]

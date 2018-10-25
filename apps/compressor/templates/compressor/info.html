@@ -2,5 +2,5 @@
 {% block title %}Shortened URL{% endblock %}
 {% block content %}
   <h1>Your shortened URL</h1>
-  <p><a href="{% url 'compressor:redirect' internal=internal %}">{{ request.get_host }}/{{ internal }}</a></p>
+  <p><a href="{% url 'compressor:redirect' internal=internal %}">{{ request.get_host }}{% url 'compressor:redirect' internal=internal %}</a></p>
 {% endblock %}
