@@ -33,5 +33,4 @@ def redirect_view(request, **kwargs):
 
     internal = kwargs.get('internal')
     original = HyperlinkModel.objects.filter(internal=internal).first().original
-    # TODO: increment the view count by one
-    return redirect(original)
+    return redirect(original, permanent=True)
