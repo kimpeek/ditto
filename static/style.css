@@ -1,4 +1,268 @@
+/* 	SITE NAME HERE
+	Ditto URL Shortener.
+  Site by KP DEV
+  Design by PatrickWalters.Design
+  Version 1.0
+  Last Update 10/28/2018
+*/
+/* Body */
 * {
-    margin: 0;
-    padding: 0;
-}
+  box-sizing: border-box; }
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
+.submit-page {
+  background: url("../static/images/submit-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.show-page {
+  background: url("../static/images/show-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.error-page {
+  background: url("../static/images/error-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+
+.logo {
+  font-family: 'Baloo', cursive;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin: 0 1rem; }
+
+.mark {
+  width: 40px; }
+
+.content-area {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.message-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .message-area h1 {
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    color: #fff; }
+
+.main-action {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .main-action form {
+    width: 50%;
+    max-width: 600px; }
+    .main-action form label {
+      display: none; }
+    .main-action form input[type="url"] {
+      width: calc(100%);
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: 0.5rem;
+      font-family: 'Open Sans', sans-serif;
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+      margin-bottom: 1rem;
+      border: 2px solid #EA4984;
+      transition: .3s; }
+      .main-action form input[type="url"]:focus {
+        border: 2px solid #63CDF2;
+        outline: none; }
+      .main-action form input[type="url"]:active {
+        border: 2px solid #63CDF2;
+        outline: none; }
+    .main-action form input[type="submit"] {
+      width: 100%; }
+
+.show-container {
+  width: 50%;
+  max-width: 600px; }
+  .show-container .button {
+    background: #EA4984;
+    width: 100%; }
+
+.short-url {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  width: calc(100%);
+  padding: .5rem 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center; }
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-self: flex-end;
+  justify-content: flex-end; }
+  footer a {
+    font-family: "Baloo", cursive;
+    color: #EA4984;
+    font-size: 2rem;
+    transition: .3s;
+    margin: 0 1rem; }
+    footer a:hover {
+      color: #3C9ECF; }
+
+/* Header */
+/* Button */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  background-color: #3C9ECF;
+  border-radius: 0.5rem;
+  border: 0;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  height: 3.5em;
+  letter-spacing: 2px;
+  line-height: 3.45em;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: 'Baloo', cursive;
+  text-transform: uppercase;
+  transition: .3s;
+  outline: none; }
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover,
+  button:hover,
+  .button:hover {
+    background: #63CDF2;
+    color: #fff; }
+  input[type="submit"]:active,
+  input[type="reset"]:active,
+  input[type="button"]:active,
+  button:active,
+  .button:active {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    box-shadow: 0 8px 17px rgba(50, 50, 93, 0.1), 0 3px 7px rgba(0, 0, 0, 0.07); }
+
+/* Typography */
+body, input, select, textarea, button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16pt;
+  line-height: 1.75; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baloo', cursive;
+  font-weight: bold;
+  color: #EA4984; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1em; }
+
+h4 {
+  font-size: 0.8em; }
+
+h5 {
+  font-size: 0.8em; }
+
+h6 {
+  font-size: 0.8em; }
+
+/* Max px */
+@media screen and (max-width: 480px) {
+  .message-area h1 {
+    font-size: 1.4rem;
+    width: 90%; }
+  .main-action form {
+    width: 90%;
+    font-size: 1rem; }
+    .main-action form input[type="url"] {
+      font-size: .9rem; }
+  .show-container {
+    width: 90%;
+    font-size: .9rem; }
+  footer a {
+    font-size: .9rem; } }
+
+/* End of max400 */
+@media screen and (max-width: 1024px) {
+  .message-area h1 {
+    width: 90%; }
+  .main-action form {
+    width: 90%; }
+  .show-container {
+    width: 90%; } }
+
+@media screen and (max-width: 740px) and (orientation: landscape) {
+  .content-area {
+    flex-wrap: nowrap;
+    flex-direction: row; }
+  .message-area h1 {
+    font-size: 1.5rem; }
+  .main-action input[type="url"] {
+    font-size: .9rem; }
+  input[type="submit"] {
+    font-size: .9rem; }
+  footer a {
+    font-size: .8rem; } }
