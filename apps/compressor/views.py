@@ -1,5 +1,4 @@
-from django.views.generic.edit import CreateView
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 from django.shortcuts import get_object_or_404, redirect
 
 from .models import HyperlinkModel
@@ -11,6 +10,15 @@ class HyperlinkCreateView(CreateView):
     template_name = 'compressor/create.html'
     model = HyperlinkModel
     fields = ['original']
+
+    def get_form(self, form_class=None):
+        if form_class is None:
+            form_class = self.get_form_class()
+
+        form = super(HyperlinkCreateView, self).get_form(form_class)
+        form.fields['original'].label = 'Long URL'
+        form.fields['original'].widget.attrs['placeholder'] = 'Paste your link here:'
+        return form
 
     def form_valid(self, form):
         hyperlink = form.save()
