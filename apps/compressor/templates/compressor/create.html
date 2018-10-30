@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}Shorten a URL{% endblock %}
-{% block content %}
+
+{% block body_class %}submit-page{% endblock %}
+
+{% block message %}A super-simple Django-powered URL shortener{% endblock %}
+
+{% block main_action %}
   <form method="post">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="Shorten">
+    <input type="submit" value="Shrink It" class="button">
   </form>
 {% endblock %}

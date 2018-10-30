@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Shortened URL{% endblock %}
-{% block content %}
-  <h1>Your shortened URL</h1>
-  <p><a href="{% url 'compressor:redirect' internal=internal %}">{{ request.get_host }}{% url 'compressor:redirect' internal=internal %}</a></p>
+
+{% block body_class %}show-page{% endblock %}
+
+{% block message %}Boom! Here is your super-sweet short URL{% endblock %}
+
+{% block main_action %}
+  <div class="show-container">
+    <script>
+      function toClipboard() {
+          const url = document.getElementById('internal_url');
+          url.select();
+          document.execCommand("copy");
+      }
+    </script>
+    <input type="text" id="internal_url" class="short-url" value="{{ request.get_host }}{% url 'compressor:redirect' internal=internal %}" readonly>
+    <button id="clipboard" class="button" onclick="toClipboard()">
+      <span class="copy-icon"> </span>
+      Copy URL to the clipboard
+    </button>
+  </div>
 {% endblock %}
