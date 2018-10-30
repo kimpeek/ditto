@@ -12,7 +12,7 @@ def generate_internal_id(length=5):
     internal_id = ''.join(char_list)
 
     # Recursively check if the newly created ID already exists. Extend length if so
-    # This does not mean that ever possible shorter length string has been used
+    # This does not mean that every possible shorter-length string has been used
     if HyperlinkModel.objects.filter(internal=internal_id).exists():
         return generate_internal_id(length + 1)
     return internal_id
@@ -20,7 +20,7 @@ def generate_internal_id(length=5):
 
 class HyperlinkModel(models.Model):
     created = models.DateTimeField(auto_now_add=True)
-    original = models.URLField(max_length=254)
+    original = models.URLField(max_length=255)
     internal = models.CharField(
         default=generate_internal_id,
         editable=False,
