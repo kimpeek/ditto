@@ -1,12 +1,7 @@
-TODO: optional expiration
-TODO: features for result page
-    - show redirect URL
-    - display as clickable link
-    - display as text
-    - display as a raw HTML snippet
-    - copy to clipboard button
 TODO: site.com/a/shortened
-    - show number of click
+    - show number of clicks
     - graph the time for each click
     - Create a clicks model
     - record a click for the hyperlink every time redirect url is requested
+
+TODO: favicon.ico - pink or blue
