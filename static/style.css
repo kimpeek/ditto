@@ -20,7 +20,7 @@ body {
   height: 100%; }
 
 .submit-page {
-  background: url("../static/images/submit-bg.svg");
+  background: url("submit-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -31,7 +31,7 @@ body {
   flex-wrap: wrap; }
 
 .show-page {
-  background: url("../static/images/show-bg.svg");
+  background: url("show-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -42,7 +42,7 @@ body {
   flex-wrap: wrap; }
 
 .error-page {
-  background: url("../static/images/error-bg.svg");
+  background: url("error-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
