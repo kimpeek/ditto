@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, CreateView
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, reverse
 
 from .models import HyperlinkModel
 
@@ -32,8 +32,18 @@ class HyperlinkInfoView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['internal'] = kwargs.get('internal')
+        host = self.request.get_host()  # www.ditto.pink
+        internal_id = kwargs.get('internal')  # A1A1A
+        context['redirect'] = build_short_redirect_url(host, internal_id)
         return context
+
+
+def build_short_redirect_url(host, internal_id):
+    """Build the redirect URL to display in the template. Strip the leading `www.`"""
+
+    endpoint = reverse('compressor:redirect', kwargs={'internal': internal_id})  # /r/A1A1A
+    full_redirect = ''.join([host, endpoint])  # www.ditto.pink/r/A1A1A
+    return full_redirect.lstrip('www.')
 
 
 def redirect_view(request, **kwargs):
