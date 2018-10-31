@@ -4,6 +4,10 @@ URL shortening service built with Django and hosted on Heroku.
 
 [View the app live](http://www.ditto.pink/)
 
+![Create](https://i.imgur.com/3DLTF0d.png)
+
+![copy](https://i.imgur.com/dOSF9ae.png)
+
 ## Develop
 
 1. Fork it
