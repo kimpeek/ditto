@@ -14,7 +14,7 @@
       }
     </script>
     <input type="text" id="internal_url" class="short-url"
-           value="{{ request.get_host }}{% url 'compressor:redirect' internal=internal %}"
+           value="{{ redirect }}"
            readonly>
     <button id="clipboard" class="button" onclick="toClipboard()">
       <span class="copy-icon"> </span>
