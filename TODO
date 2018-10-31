@@ -1,7 +1,7 @@
 TODO: site.com/a/shortened
-    - show number of clicks
-    - graph the time for each click
-    - Create a clicks model
-    - record a click for the hyperlink every time redirect url is requested
-
-TODO: favicon.ico - pink or blue
+    - age
+    - clicks
+    - time since last click
+    - popularity compared to all links
+    - other recent links
+    - show the page that the link will redirect to
